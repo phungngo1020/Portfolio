@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased; /*Make text smoother*/
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Doris', sans-serif;
+    color: rgb(63, 60, 60);
+}
+h2 {
+    font-size: 6vh;
+}
+
+a, 
+a:link{
+    text-decoration: none;
+    margin: 0;
+}
+
+.arrow {
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 100%;
+
+    background-image: url(https://images.unsplash.com/photo-1561211974-8a2737b4dcac?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80);
+    background-size: cover;
+    
+    animation-name: open;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+
+    font-size: 5vh;
+}
+
+.icon {
+  color:  rgb(63, 60, 60);
+}
+
+.home__contacts {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  animation-name: iconSlide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes iconSlide {
+  0% {
+    transform: translateX(-10vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ion-md-ice-cream {
+  position: fixed;
+  z-index: 100;
+  transition: 2s;
+  /*animation-name: rotate;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;*/
+  color: rgb(73, 70, 70);
+}
+.ion-md-ice-cream {
+  animation: float 3s ease-out infinite;
+  font-size: 50px;
+}
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0.5) rotate(0);
+  }
+  70% {
+    transform: scale(1.4) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+@keyframes open {
+    0% {
+        clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    }
+    100% {
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    }
+}
+
+.primary-h1 {
+    z-index: 1;
+    color: rgb(63, 60, 60);
+
+    font-size: 5vw;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    animation-name: expand;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  
+    display: flex;
+}
+@keyframes expand {
+    0% {
+        transform: translateX(7vw);
+    }
+    80% {
+        transform: translateX(-0.5vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.border {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 5vh;
+    width: 40%;
+
+    background-image: url(https://images.unsplash.com/photo-1562680839-ea99d835be54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+    background-size: cover;
+    box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes moveInRight {
+    0% {
+        transform: translateX(-7vw);
+    }
+    80% {
+        transform: translateX(0.5vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 900px) {
+  .primary-h1 {
+    font-size: 40px;
+  }
+  .border {
+    height: 30px;
+    width: 50%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.navigation {
+    width: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 2%;
+}
+
+
+.solid {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+}
+
+.intro-container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+
+    background-color: rgba(63, 60, 60);
+    box-shadow: 5px 10px 40px white;
+}
+.intro {
+    height: 45vh;
+    width: 40vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(8vh);
+    margin-left: 10vw;
+    border-radius: 1px 10px 1px 10px;
+
+    padding: 2vw;
+    font-size: 2vw;
+    font-weight: 700;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.445), rgba(128, 128, 128, 0.452)),url(https://images.unsplash.com/photo-1562680839-ea99d835be54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+    background-size: cover;
+    box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+.skills {
+  margin: 1vw;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  width: 60vw;
+  height: 50vh;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+}
+.skillsets {
+    display: flex;
+}
+.skills-left {
+  width: 20vw;
+  height: 50vh;
+}
+.skills-right {
+  width: 40vw;
+  height: 50vh;
+}
+.skills-h2 {
+  color: rgba(189, 186, 186);
+}
+.skill {
+    font-size: 1vw;
+    font-weight: 700;
+    color: rgb(189, 179, 179);
+    width: 40vw;
+    text-transform: uppercase;
+    line-height: 1.6vw;
+}
+@media screen and (max-width:900px){
+  .intro-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 50vh;
+    border-radius: 0;
+  }
+  .intro {
+    margin: 0;
+    width: 50vw;
+    height: 50vh;
+    transform: translateY(0);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 20px;
+  }
+  .skills {
+    margin: 0;
+    width: 50vw;
+    height: 50vh;
+    padding: 2vw;
+  }
+  .skill {
+    font-size: 10px;
+    line-height: 2em;
+  }
+}
+
+.projects {
+    height: 250vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url(https://images.unsplash.com/photo-1562619371-b67725b6fde2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);
+    background-size: cover;
+}
+
+
+.projects__header {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 20vh;
+  transform: translateY(10vh);
+}
+@media screen and (max-width: 900px) {
+  .projects {
+    height: 335vh;
+  }
+  .projects__header {
+    height: 5vh;
+    transform: translateY(0);
+    margin-bottom: 1em;
+  }
+}
+.projects__h2 {
+    text-transform: uppercase;
+    margin-right: 5vw;
+}
+@media screen and (max-width: 900px) {
+  .projects__h2 {
+    margin-top: 10%;
+  }
+}
+
+.projects__content {
+    height: 80vh;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;  
+    transform: translateY(10vh);
+}
+@media screen and (max-width:3000px){
+  .projects__content {
+    height: 300vh;
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+.projectBox {
+   width: 42.5vw; /* 5 42.5 5 42.5 5 */
+   height: 42vh;
+   margin-left: 5vw;
+   
+   border-radius: 4px;
+  
+   display: flex;
+}
+@media screen and (max-width:900px){
+  .projectBox {
+    width: 80vw; /* 10 80 10 */
+    height: 30vh;
+    margin-bottom: 1vh;
+    margin-left: 0;
+  }
+}
+
+.projectbg {
+  width: 42.5vw;
+  height: 42vh;
+  z-index: 1;
+  background-color: rgba(63,60,60);
+  clip-path: polygon(0% 0, 40% 0, 60% 100%, 0 100%);
+  
+  text-decoration: none;
+  border-radius: 4px;
+
+  transition: 2s;
+  -webkit-transition: 2s;
+}
+.projectbg:hover {
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+}
+@media screen and (max-width: 900px) {
+  .projectbg {
+    width: 80vw;
+    height: 30vh;
+    clip-path: polygon(0% 0, 50% 0, 60% 100%, 0 100%);
+  }
+  .projectbg:hover {
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+h3 {
+  color: rgb(189, 186, 186);
+  font-size: 2.5vw;
+  margin-left: 2vw;
+  margin-top: 8vh;
+}
+.description {
+  width: 40%;
+  margin-left: 2vw;
+  color: rgb(189, 186, 186);
+}
+.description-2 {
+  font-weight: bold;
+}
+@media screen and (max-width: 900px) {
+  h3 {
+    margin-top: 2vh;
+    margin-right: 1vw;
+    font-size: 1.2em;
+  }
+  .description {
+    width: 50%;
+    margin: 20px;
+    font-size: .7em;
+  }
+}
+
+.p-covidtracker {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/covid-tracker.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+
+.p-chatapp {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/chat-app.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+.p-jobsAPI {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/Jobs.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+.p-eventmesh {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/Screen%20Shot%202020-01-15%20at%204.08.17%20PM.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+.p-trailfinder {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/Screen%20Shot%202020-01-16%20at%2010.54.45%20AM.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+
+.p-pasteltemplate {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/pasteltemplate1.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+
+.p-pomodorotimer {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/pomodorotimer1.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+
+.p-streetarts {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/streetarts.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+.p-ghibli {
+  background-image: url(https://github.com/phungngo1020/porfolio-test1/blob/master/img/ghibli.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+}
+/* .p-vanillajstodo {
+  background-image: url(https://github.com/phungngo1020/portfolio-test1/blob/master/img/vanillajstodo1.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 10px 40px rgba(47, 42, 42, 0.7);
+} */
+
+.footer {
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(63, 60, 60);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContent {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid rgb(189, 179, 179);
+  color: rgb(189, 179, 179);
+}
+
